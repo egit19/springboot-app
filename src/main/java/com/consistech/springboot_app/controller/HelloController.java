@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class GreetingController {
+public class HelloController {
 
-    @GetMapping("/greetings")
-    public String getGreeting() {
-        return "Halo dari Spring Boot! Greatings 2";
+    @GetMapping("/home")
+    public String home() {
+        return "Hello, Spring Boot is running 10!";
     }
 }
