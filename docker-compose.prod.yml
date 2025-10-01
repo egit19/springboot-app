@@ -1,4 +1,5 @@
 version: "3.9"
+
 services:
   db:
     image: postgres:16
@@ -24,11 +25,7 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
     ports:
-      - "8084:8080"
-    volumes:
-      - ./src:/app/src
-      - ./pom.xml:/app/pom.xml
-    command: mvn spring-boot:run
+      - "8085:8080"   # host 8085 -> container 8080
     networks:
       - springboot-net
 
